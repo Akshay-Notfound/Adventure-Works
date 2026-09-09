@@ -3,7 +3,7 @@
 # 🚴 Adventure Works Cycles: Sales Performance & BI Analytics
 ### *End-to-End Enterprise Data Analytics & Business Intelligence Capstone (2010–2014)*
 
-[![Academic Project](https://img.shields.io/badge/Academic%20Project-Group%204%20Capstone-blueviolet?style=for-the-badge&logo=googlescholar&logoColor=white)](#-academic-project-team--group-4)
+[![Academic Project](https://img.shields.io/badge/Academic%20Project-Data%20Analytics%20Capstone-blueviolet?style=for-the-badge&logo=googlescholar&logoColor=white)](#-executive-summary)
 [![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](Excel/PROJECT%20ADVENTURES%20WORK%201.xlsx)
 [![MySQL Workbench](https://img.shields.io/badge/MySQL_Workbench-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](MySQL/adventureworks.sql)
 [![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](PowerBi/AdventureWorksPowerBiProjectNew.pbix)
@@ -20,7 +20,7 @@
 ---
 
 ### ⚡ Quick Navigation Pills
-[📌 Overview](#-executive-summary) • [📊 KPI Scorecards](#-interactive-kpi-scorecards) • [🏗️ Data Model (ERD)](#-architecture--star-schema-erd) • [🔄 4-Phase Workflow](#-end-to-end-analytics-pipeline) • [🗄️ SQL Analytics (17 Queries)](#-mysql-analytical-queries--solutions-catalog) • [📈 Dashboards](#-interactive-dashboards--visualizations) • [💡 Business Insights](#-strategic-business-insights--actionable-matrix) • [👥 Team](#-academic-project-team--group-4) • [🚀 Quickstart](#-quickstart--reproduction-guide)
+[📌 Overview](#-executive-summary) • [📊 KPI Scorecards](#-interactive-kpi-scorecards) • [🏗️ Data Model (ERD)](#-architecture--star-schema-erd) • [🔄 4-Phase Workflow](#-end-to-end-analytics-pipeline) • [🗄️ SQL Analytics (17 Queries)](#-mysql-analytical-queries--solutions-catalog) • [📈 Dashboards](#-interactive-dashboards--visualizations) • [💡 Business Insights](#-strategic-business-insights--actionable-matrix) • [🚀 Quickstart](#-quickstart--reproduction-guide)
 
 ---
 
@@ -30,7 +30,7 @@
 
 **Adventure Works Cycles** is a premier multinational manufacturing company specializing in commercial metal and composite bicycles, cycling accessories, and performance gear across **North American, European, and Asian markets**. Headquartered in **Bothell, Washington**, operations are supported by a manufacturing subcomponent plant in Mexico and global distribution hubs.
 
-This repository hosts the **complete, end-to-end academic capstone analytics project** developed by **Group 4**. By leveraging transactional sales records spanning **2010 to 2014**, our team engineered relational database models, executed advanced SQL window analyses, and created interactive multi-platform business intelligence dashboards across **Microsoft Excel**, **MySQL**, **Tableau**, and **Microsoft Power BI**.
+This repository hosts the **complete, end-to-end academic capstone analytics project**. By leveraging transactional sales records spanning **2010 to 2014**, the project engineers relational database models, executes advanced SQL window analyses, and delivers interactive multi-platform business intelligence dashboards across **Microsoft Excel**, **MySQL**, **Tableau**, and **Microsoft Power BI**.
 
 ```
 ┌───────────────────────────┬───────────────────────────┬───────────────────────────┐
@@ -488,26 +488,6 @@ GROUP BY p.EnglishProductName ORDER BY TotalProfit DESC LIMIT 10;
 
 ---
 
-## 👥 Academic Project Team – Group 4
-
-This project was developed and delivered as an academic capstone by **Group 4**:
-
-<div align="center">
-
-| Name | Role | Core Contributions | Profile |
-| :--- | :--- | :--- | :---: |
-| **Akshay Rathod** | **Data Analyst (Lead)** | SQL query architecture, Power BI dashboard development, end-to-end analytics workflow & documentation | [![GitHub](https://img.shields.io/badge/GitHub-Akshay--Notfound-181717?style=flat-square&logo=github)](https://github.com/Akshay-Notfound) |
-| **Ega Venkat Sai** | **Data Analyst** | Data transformation, Excel modeling, pivot tables & chart design | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
-| **Usirikayala Vishnu Vamsi** | **Data Analyst** | MySQL database schema design, view creation & window function queries | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
-| **Bathala Siva Kumar** | **Data Analyst** | Tableau workbook development, visual design & multi-parameter slicers | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
-| **Pratyush Parashar** | **Business Analyst** | Business requirement mapping, KPI formulation & executive presentation deck | ![Analyst](https://img.shields.io/badge/Role-Business%20Analyst-purple?style=flat-square) |
-| **Hitesh Prajapati** | **Data Analyst** | Power Query data cleaning, star-schema data modeling & DAX measures | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
-| **Prashant Pankaj Singh** | **Data Analyst** | Comprehensive reporting, exploratory data validation & statistical verification | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
-
-</div>
-
----
-
 ## 🚀 Quickstart & Reproduction Guide
 
 ### 1. Clone the Repository
@@ -581,6 +561,6 @@ Adventure-Works/
 <div align="center">
 
 ### ⭐ If you find this analytics project helpful, feel free to give it a star!
-*Developed with dedication by Academic Group 4 • 2026*
+*Adventure Works Cycles • Sales Performance & Business Intelligence Analytics*
 
 </div>
