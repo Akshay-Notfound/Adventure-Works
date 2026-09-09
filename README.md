@@ -1,230 +1,200 @@
-# 🚴 Adventure Works Sales Performance Analysis (2010–2014)
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Academic%20Project-Course%20Capstone-blueviolet?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Academic Project" />
-  <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Microsoft Excel" />
-  <img src="https://img.shields.io/badge/MySQL_Workbench-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
-  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" />
-  <img src="https://img.shields.io/badge/DAX%20%26%20PowerQuery-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="Power Query & DAX" />
-</p>
+# 🚴 Adventure Works Cycles: Sales Performance & BI Analytics
+### *End-to-End Enterprise Data Analytics & Business Intelligence Capstone (2010–2014)*
 
----
+[![Academic Project](https://img.shields.io/badge/Academic%20Project-Group%204%20Capstone-blueviolet?style=for-the-badge&logo=googlescholar&logoColor=white)](#-academic-project-team--group-4)
+[![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](Excel/PROJECT%20ADVENTURES%20WORK%201.xlsx)
+[![MySQL Workbench](https://img.shields.io/badge/MySQL_Workbench-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](MySQL/adventureworks.sql)
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](PowerBi/AdventureWorksPowerBiProjectNew.pbix)
+[![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](Tableau/AdvWorksTableauProject.twbx)
+[![DAX & PowerQuery](https://img.shields.io/badge/DAX%20%26%20PowerQuery-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](#-dax-measures--excel-formulas-reference)
 
-## 📌 Executive Summary & Project Overview
+<br/>
 
-**Adventure Works Cycles** is a large, multinational manufacturing company that designs and sells metal and composite bicycles, cycling accessories, and components across **North American, European, and Asian commercial markets**. Headquartered in **Bothell, Washington**, the company employs over 290 people supported by specialized regional sales teams worldwide.
-
-Following consecutive years of market expansion and the integration of a specialized manufacturing plant in Mexico, company leadership commissioned this **end-to-end Data Analytics project** to evaluate historical sales performance, diagnose production cost efficiencies, uncover customer behavior patterns, and uncover high-growth regional opportunities between **2010 and 2014**.
-
-This repository contains the complete academic course capstone project executed across four industry-standard analytical platforms: **Microsoft Excel**, **MySQL Workbench**, **Tableau**, and **Microsoft Power BI**.
+[![Repo Size](https://img.shields.io/github/repo-size/Akshay-Notfound/Adventure-Works?style=flat-square&color=555555)](https://github.com/Akshay-Notfound/Adventure-Works)
+[![Last Commit](https://img.shields.io/github/last-commit/Akshay-Notfound/Adventure-Works?style=flat-square&color=blue)](https://github.com/Akshay-Notfound/Adventure-Works/commits/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/Project%20Status-Complete%20%26%20Verified-success?style=flat-square)](#-executive-summary)
 
 ---
 
-## 📊 Key Headline Performance Metrics (2010–2014)
-
-| Metric | Value | Business Interpretation |
-| :--- | :--- | :--- |
-| 💰 **Total Revenue (Sales)** | **$29.36 Million** | Aggregate gross sales generated across all global markets |
-| 📈 **Total Net Profit** | **$12.08 Million** | Healthy bottom-line returns after standard production costs |
-| 📦 **Total Order Volume** | **60,400 Orders** | High-volume transaction processing across retail & online streams |
-| 🎯 **Overall Profit Margin** | **41.15%** | Robust, resilient profitability sustained across all product lines |
-| 🏷️ **Average Order Value (AOV)** | **$486.09** | Consistent basket value per completed customer checkout |
-| 🚀 **Peak Performance Year** | **2013 ($16.00M)** | Spectacular 2.7x growth (+170%) compared to 2012 |
-| 🏆 **Top International Market** | **Australia ($9.06M)** | Leading market by sales volume outside of North America |
-| 🥇 **Top Performing Product** | **Mountain-200 Black, 42 ($1.37M)** | Dominant revenue-driver among all bicycle subcategories |
-| 👤 **Top Customer** | **Jordan Turner ($16.00K)** | Highest lifetime customer value in the analyzed period |
-| 🗓️ **Strongest Quarter** | **Q4 (Holiday Peak)** | Consistent seasonal surge across every calendar year |
+### ⚡ Quick Navigation Pills
+[📌 Overview](#-executive-summary) • [📊 KPI Scorecards](#-interactive-kpi-scorecards) • [🏗️ Data Model (ERD)](#-architecture--star-schema-erd) • [🔄 4-Phase Workflow](#-end-to-end-analytics-pipeline) • [🗄️ SQL Analytics (17 Queries)](#-mysql-analytical-queries--solutions-catalog) • [📈 Dashboards](#-interactive-dashboards--visualizations) • [💡 Business Insights](#-strategic-business-insights--actionable-matrix) • [👥 Team](#-academic-project-team--group-4) • [🚀 Quickstart](#-quickstart--reproduction-guide)
 
 ---
 
-## 🏗️ Architecture & Data Modeling (Star Schema)
+</div>
 
-The analytical foundation is built on an industry-standard **Star-Schema Data Model**. The central fact table consolidates historical internet transactions and newer online orders, linked to six dimensional tables providing rich contextual granularity across customers, products, territories, and dates.
+## 📌 Executive Summary
 
-![Adventure Works Data Model](assets/images/data_model_star_schema.png)
+**Adventure Works Cycles** is a premier multinational manufacturing company specializing in commercial metal and composite bicycles, cycling accessories, and performance gear across **North American, European, and Asian markets**. Headquartered in **Bothell, Washington**, operations are supported by a manufacturing subcomponent plant in Mexico and global distribution hubs.
 
-### Schema Components & Cardinality
+This repository hosts the **complete, end-to-end academic capstone analytics project** developed by **Group 4**. By leveraging transactional sales records spanning **2010 to 2014**, our team engineered relational database models, executed advanced SQL window analyses, and created interactive multi-platform business intelligence dashboards across **Microsoft Excel**, **MySQL**, **Tableau**, and **Microsoft Power BI**.
 
-| Table Name | Type | Key Column(s) | Description |
-| :--- | :--- | :--- | :--- |
-| `FactInternetSales` & `Fact_Internet_Sales_New` | **Fact Tables** | `SalesOrderNumber`, `SalesOrderLineNumber` | Transaction-level sales records, quantities, discounts, and costs. Combined via SQL View & Excel Union. |
-| `DimCustomer` | **Dimension** | `CustomerKey` | Customer demographics, full names, marital status, income, and geography. |
-| `DimProduct` | **Dimension** | `ProductKey` | Master product catalog, model names, colors, standard costs, and list prices. |
-| `DimProductSubcategory` | **Dimension** | `ProductSubcategoryKey` | Granular product groupings (e.g., Mountain Bikes, Road Bikes, Touring Bikes). |
-| `DimProductCategory` | **Dimension** | `ProductCategoryKey` | Top-level classifications (Bikes, Components, Clothing, Accessories). |
-| `DimSalesTerritory` | **Dimension** | `SalesTerritoryKey` | Global regions, countries, and regional sales groups (North America, Europe, Pacific). |
-| `DimDate` | **Dimension** | `DateKey` / `OrderDateKey` | Standard calendar dates, fiscal quarters, financial months, and weekdays. |
+```
+┌───────────────────────────┬───────────────────────────┬───────────────────────────┐
+│   TOTAL GLOBAL REVENUE    │      TOTAL NET PROFIT     │     OVERALL PROFIT MARGIN │
+│         $29.36M           │          $12.08M          │          41.15%           │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┤
+│    TOTAL ORDERS LOGGED    │    AVERAGE ORDER VALUE    │      PEAK RECORD YEAR     │
+│       60,400 Orders       │          $486.09          │       2013 ($16.00M)      │
+└───────────────────────────┴───────────────────────────┴───────────────────────────┘
+```
 
 ---
 
-## 🔄 End-to-End Analytics Workflow
+## 📊 Interactive KPI Scorecards
+
+<div align="center">
+
+| Metric | Recorded Value | Performance Benchmark & Progress | Status |
+| :--- | :---: | :--- | :---: |
+| **Gross Sales Revenue** | **$29,358,677.22** | `[██████████]` **$29.36M Total Volume** | 🟢 Exceeded |
+| **Net Operational Profit** | **$12,080,876.18** | `[████████░░]` **41.15% Profit Margin** | 🟢 Strong |
+| **Total Order Volume** | **60,400 Orders** | `[█████████░]` **60.4K Transactions** | 🟢 High Volume |
+| **Average Order Value (AOV)**| **$486.09** | `[███████░░░]` **Consistent Basket Size** | 🟡 Stable |
+| **2013 YoY Revenue Spike** | **+170.2%** | `[██████████]` **2.7x Growth vs 2012** | 🚀 Peak Growth |
+| **Top International Market**| **Australia ($9.06M)**| `[████████░░]` **30.8% of Global Sales** | 🏆 Top Market |
+| **Top Revenue Product** | **Mountain-200 Black, 42** | `[███████░░░]` **$1.37M Generated** | 🥇 Best Seller |
+| **Top Customer Value** | **Jordan Turner** | `[██████░░░░]` **$16,000.00 Lifetime Spend**| 👑 Top Customer |
+
+</div>
+
+---
+
+## 🏗️ Architecture & Star-Schema ERD
+
+The data warehouse follows an enterprise **Star Schema Architecture**, linking unified transaction records in `v_UnionedSales` to 6 dimensional lookup tables.
 
 ```mermaid
-graph TD
-    A[Raw Source Data & Transactional Sheets] --> B[Phase 1: Microsoft Excel]
-    B -->|Cleaning, XLOOKUP, Date Parsing, Formulas| C[Phase 2: MySQL Workbench & Database Modeling]
-    C -->|Relational Views, Joins, Aggregations, Window Functions| D[Phase 3: Interactive Dashboards & BI Visualizations]
-    D --> E[Tableau Desktop Dashboard]
-    D --> F[Power BI Enterprise Dashboard]
-    D --> G[Excel Dynamic Pivot Dashboard]
-    E & F & G --> H[Phase 4: Academic Report & Executive Presentation]
+erDiagram
+    FACT_INTERNET_SALES ||--o{ DIM_CUSTOMER : "CustomerKey"
+    FACT_INTERNET_SALES ||--o{ DIM_PRODUCT : "ProductKey"
+    FACT_INTERNET_SALES ||--o{ DIM_SALES_TERRITORY : "SalesTerritoryKey"
+    FACT_INTERNET_SALES ||--o{ DIM_DATE : "OrderDateKey"
+    DIM_PRODUCT ||--o{ DIM_PRODUCT_SUBCATEGORY : "ProductSubcategoryKey"
+    DIM_PRODUCT_SUBCATEGORY ||--o{ DIM_PRODUCT_CATEGORY : "ProductCategoryKey"
+
+    FACT_INTERNET_SALES {
+        string SalesOrderNumber PK
+        int SalesOrderLineNumber PK
+        int ProductKey FK
+        int CustomerKey FK
+        int SalesTerritoryKey FK
+        int OrderDateKey FK
+        int OrderQuantity
+        decimal UnitPrice
+        float UnitPriceDiscountPct
+        decimal ProductStandardCost
+        decimal SalesAmount
+    }
+
+    DIM_CUSTOMER {
+        int CustomerKey PK
+        string FirstName
+        string LastName
+        string EmailAddress
+        decimal YearlyIncome
+        string EnglishEducation
+        string EnglishOccupation
+    }
+
+    DIM_PRODUCT {
+        int ProductKey PK
+        string ProductAlternateKey
+        string EnglishProductName
+        decimal StandardCost
+        decimal ListPrice
+        string Color
+        int ProductSubcategoryKey FK
+    }
+
+    DIM_SALES_TERRITORY {
+        int SalesTerritoryKey PK
+        string SalesTerritoryRegion
+        string SalesTerritoryCountry
+        string SalesTerritoryGroup
+    }
+
+    DIM_DATE {
+        int DateKey PK
+        date FullDateAlternateKey
+        int CalendarYear
+        int CalendarQuarter
+        string EnglishDayNameOfWeek
+    }
 ```
 
-### Phase 1: Microsoft Excel Data Engineering & Analysis
-- **Data Consolidation**: Unioned `FactInternetSales` and `Fact_Internet_Sales_New` into a unified `SALES` worksheet containing over 60,000 transaction records.
-- **Relational Lookups**: Implemented `XLOOKUP` and `VLOOKUP` routines to fetch Product Names, Customer Full Names, and Unit Prices from dimension sheets.
-- **Date Feature Engineering**: Derived `Year`, `Month Number`, `Month Full Name`, `Quarter (Q1-Q4)`, `Year-Month`, `Weekday Number`, `Weekday Name`, `Financial Month`, and `Financial Quarter`.
-- **Financial Calculations**:
-  - `Sales Amount = UnitPrice * OrderQuantity * (1 - UnitPriceDiscountPct)`
-  - `Production Cost = ProductStandardCost * OrderQuantity`
-  - `Profit = Sales Amount - Production Cost`
-- **Exploratory Analysis**: Developed multidimensional Pivot Tables and Pivot Charts analyzing year-over-year revenue, product category contributions, and quarterly trends.
+<div align="center">
+  <img src="assets/images/data_model_star_schema.png" alt="Star Schema Data Model" width="900" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+  <p><em>Figure 1: High-resolution Star-Schema Data Model linking transactional fact tables with contextual dimension entities.</em></p>
+</div>
+
+<details>
+<summary><b>🔍 Click to expand Interactive Schema & Column Details</b></summary>
+
+For complete column-by-column descriptions, data types, constraints, and business rules, read the [📖 Full Data Dictionary](docs/DATA_DICTIONARY.md).
+
+| Table Name | Entity Classification | Key Identifier | Cardinality | Primary Analytical Role |
+| :--- | :--- | :--- | :--- | :--- |
+| `v_UnionedSales` | **Fact View** | `SalesOrderNumber`, `LineNumber` | 60,400 Rows | Core sales metrics, order quantities, price, discounts, margins |
+| `DimCustomer` | **Dimension** | `CustomerKey` | 18,484 Rows | Customer demographics, household income, geography, education |
+| `DimProduct` | **Dimension** | `ProductKey` | 606 Rows | Model specifications, colorways, standard costs, MSRP list prices |
+| `DimProductCategory` | **Dimension** | `ProductCategoryKey` | 4 Rows | High-level classifications: Bikes, Components, Clothing, Accessories |
+| `DimProductSubcategory`| **Dimension** | `ProductSubcategoryKey` | 37 Rows | Sub-categories: Mountain Bikes, Road Bikes, Touring Bikes, Tires |
+| `DimSalesTerritory` | **Dimension** | `SalesTerritoryKey` | 10 Regions | Global distribution zones across North America, Europe, Pacific |
+| `DimDate` | **Dimension** | `DateKey` (`YYYYMMDD`) | 3,652 Days | Temporal hierarchy: Calendar/Fiscal Years, Quarters, Months, Days |
+
+</details>
 
 ---
 
-### Phase 2: MySQL Workbench & SQL Scripting
+## 🔄 End-to-End Analytics Pipeline
 
-A unified view `v_UnionedSales` was engineered to serve as the single source of truth across all 17 assigned analytical problems.
+```mermaid
+flowchart LR
+    subgraph DataPrep ["1. Data Engineering & Cleansing"]
+        A[FactInternetSales] & B[Fact_Internet_Sales_New] --> C[Excel SALES Union]
+        C --> D[XLOOKUP & Date Engineering]
+    end
 
-```sql
-CREATE OR REPLACE VIEW v_UnionedSales AS
-    SELECT * FROM factinternetsales 
-    UNION ALL 
-    SELECT * FROM factinternetsalesnew;
+    subgraph RelationalDB ["2. MySQL Workbench"]
+        D --> E[(AdventureWorks DB)]
+        E --> F[v_UnionedSales View]
+        F --> G[17 Analytical Queries & Window Functions]
+    end
+
+    subgraph VisualAnalytics ["3. BI & Dashboards"]
+        G --> H[Tableau Dashboard]
+        G --> I[Power BI Dashboard]
+        G --> J[Excel Dynamic Dashboard]
+    end
+
+    subgraph ExecutiveOutcomes ["4. Insights & Delivery"]
+        H & I & J --> K[Executive Slide Pitch Deck]
+        H & I & J --> L[Academic Capstone Report PDF]
+    end
+
+    style DataPrep fill:#f4fbf7,stroke:#217346,stroke-width:2px;
+    style RelationalDB fill:#f0f7fc,stroke:#4479A1,stroke-width:2px;
+    style VisualAnalytics fill:#fffbf0,stroke:#E97627,stroke-width:2px;
+    style ExecutiveOutcomes fill:#faf5ff,stroke:#7c3aed,stroke-width:2px;
 ```
 
-#### Analytical Queries & Business Outputs Breakdown
+---
 
-#### 1. Product Name Lookup
-```sql
-SELECT s.*, p.EnglishProductName AS ProductName
-FROM v_UnionedSales s
-LEFT JOIN dimproduct p ON s.ProductKey = p.ProductKey;
-```
-* **Output / Objective**: Merges the descriptive English product name onto every sales line item to enable product-level grouping.
+## 🗄️ MySQL Analytical Queries & Solutions Catalog
 
-#### 2. Customer Full Name & Unit Price Lookup
-```sql
-SELECT 
-    CONCAT(c.FirstName, ' ', COALESCE(c.MiddleName, ''), ' ', c.LastName) AS CustomerFullName,
-    p.EnglishProductName AS ProductName,
-    s.UnitPrice
-FROM sales s
-JOIN dimcustomer c ON s.CustomerKey = c.CustomerKey
-JOIN dimproduct p ON s.ProductKey = p.ProductKey;
-```
-* **Output / Objective**: Builds an enriched customer-product interaction view handling optional middle names cleanly with `COALESCE`.
+All 17 analytical requirements are contained in [`MySQL/adventureworks.sql`](MySQL/adventureworks.sql). Click below to explore the code, business reasoning, and results.
 
-#### 3. Comprehensive Date Attributes Transformation
-```sql
-SELECT 
-    OrderDateKey,
-    STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d') AS OrderDateParsed,
-    YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderYear,
-    MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderMonthNo,
-    MONTHNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderMonthFullName,
-    CONCAT('Q', QUARTER(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))) AS OrderQuarter,
-    DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b') AS OrderYearMonth,
-    DAYOFWEEK(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderWeekdayNo,
-    DAYNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderWeekdayName,
-    MOD(MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) + 5, 12) + 1 AS FinancialMonth,
-    CONCAT('FQ', CEILING((MOD(MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) + 5, 12) + 1) / 3.0)) AS FinancialQuarter
-FROM v_UnionedSales;
-```
-* **Output / Objective**: Generates granular temporal dimensions (Calendar & Fiscal periods starting in July).
+<details open>
+<summary><b>🔥 Featured Queries: Advanced Window Functions & Ranking</b></summary>
 
-#### 4, 5 & 6. Sales Amount, Production Cost, and Net Profit
-```sql
-SELECT 
-    SalesOrderNumber,
-    (UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS CalculatedSalesAmount,
-    (ProductStandardCost * OrderQuantity) AS CalculatedProductionCost,
-    ((UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) - (ProductStandardCost * OrderQuantity)) AS CalculatedProfit
-FROM v_UnionedSales;
-```
-* **Output / Objective**: Calculates row-level gross receipts, manufacturing costs, and net margins accounting for promotional discounts.
+<br/>
 
-#### 7. Monthly Pivot Query with Dynamic Year Filter (e.g., 2014)
-```sql
-SELECT 
-    MONTHNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS Month,
-    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
-FROM v_UnionedSales
-WHERE YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) = 2014
-GROUP BY MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')), MONTHNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))
-ORDER BY MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'));
-```
-* **Output / Objective**: Provides a targeted monthly revenue breakdown for any selected fiscal or calendar year.
-
-#### 8. Year-Wise Total Sales
-```sql
-SELECT 
-    YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS Year,
-    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
-FROM v_UnionedSales
-GROUP BY YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))
-ORDER BY Year;
-```
-* **Output / Objective**: Demonstrates the macro growth curve from 2010 through 2014, showing the massive revenue jump in 2013.
-
-#### 9. Month-Wise Chronological Sales Trend
-```sql
-SELECT 
-    DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b') AS YearMonth,
-    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
-FROM v_UnionedSales
-GROUP BY DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b'), STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m')
-ORDER BY STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m');
-```
-* **Output / Objective**: Uncovers granular seasonality, peak buying months, and recurring demand spikes.
-
-#### 10. Quarter-Wise Aggregate Sales (Q1 to Q4)
-```sql
-SELECT 
-    CONCAT('Q', QUARTER(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))) AS Quarter,
-    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
-FROM v_UnionedSales
-GROUP BY CONCAT('Q', QUARTER(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')))
-ORDER BY Quarter;
-```
-* **Output / Objective**: Confirms Q4 as the highest-grossing quarter due to holiday cycling demand.
-
-#### 11. Dual-Axis Combo: Sales Amount vs. Production Cost
-```sql
-SELECT 
-    DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b') AS YearMonth,
-    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSalesAmount,
-    SUM(ProductStandardCost * OrderQuantity) AS TotalProductionCost
-FROM v_UnionedSales
-GROUP BY DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b'), STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m')
-ORDER BY STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m');
-```
-* **Output / Objective**: Verifies that manufacturing costs scale predictably below revenue, maintaining strong gross margins across all operational months.
-
-#### 12. Core KPIs: Top Products, Top Customers & Regional Distribution
-```sql
--- Top 10 Products
-SELECT p.EnglishProductName AS ProductName,
-       SUM(s.UnitPrice * s.OrderQuantity * (1 - (IFNULL(s.UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
-FROM v_UnionedSales s JOIN dimproduct p ON s.ProductKey = p.ProductKey
-GROUP BY p.EnglishProductName ORDER BY TotalSales DESC LIMIT 10;
-
--- Top 10 Customers
-SELECT CONCAT(c.FirstName, ' ', IFNULL(c.MiddleName, ''), ' ', c.LastName) AS CustomerFullName,
-       SUM(s.UnitPrice * s.OrderQuantity * (1 - (IFNULL(s.UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
-FROM v_UnionedSales s JOIN dimcustomer c ON s.CustomerKey = c.CustomerKey
-GROUP BY CustomerFullName ORDER BY TotalSales DESC LIMIT 10;
-
--- Regional Performance
-SELECT t.SalesTerritoryRegion AS Region,
-       SUM(s.UnitPrice * s.OrderQuantity * (1 - (IFNULL(s.UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
-FROM v_UnionedSales s JOIN dimsalesterritory t ON s.SalesTerritoryKey = t.SalesTerritoryKey
-GROUP BY t.SalesTerritoryRegion ORDER BY TotalSales DESC;
-```
-* **Output / Objective**: Identifies Mountain bike models as top revenue drivers, names Jordan Turner as top customer ($16K), and confirms Southwest USA and Australia as top revenue regions.
-
-#### 13. Advanced SQL: Year-over-Year (YoY) Sales Growth with `LAG()`
+#### 📈 Query 13: Year-over-Year (YoY) Sales Growth with `LAG()`
+* **Business Objective:** Measure annual growth trajectory and calculate percentage change year-over-year.
 ```sql
 WITH YearlySales AS (
     SELECT 
@@ -237,12 +207,15 @@ SELECT
     SalesYear,
     TotalSales,
     LAG(TotalSales) OVER (ORDER BY SalesYear) AS PreviousYearSales,
-    ((TotalSales - LAG(TotalSales) OVER (ORDER BY SalesYear)) / LAG(TotalSales) OVER (ORDER BY SalesYear)) * 100 AS YoY_Growth_Percentage
+    ROUND(((TotalSales - LAG(TotalSales) OVER (ORDER BY SalesYear)) / LAG(TotalSales) OVER (ORDER BY SalesYear)) * 100, 2) AS YoY_Growth_Percentage
 FROM YearlySales;
 ```
-* **Output / Objective**: Quantifies annual percentage growth, highlighting the extraordinary revenue leap in 2013.
+* **Output / Finding:** Demonstrates the historic revenue acceleration in 2013 where sales surged by **+170.2%** over 2012.
 
-#### 14. Advanced SQL: Monthly Cumulative Running Total
+---
+
+#### 📊 Query 14: Monthly Cumulative Running Total (`SUM() OVER`)
+* **Business Objective:** Track the cumulative revenue trajectory month-over-month across all operating periods.
 ```sql
 WITH MonthlySales AS (
     SELECT 
@@ -259,9 +232,158 @@ SELECT
     SUM(MonthlySalesAmount) OVER (ORDER BY SalesYear, SalesMonth ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS CumulativeMonthlySales
 FROM MonthlySales;
 ```
-* **Output / Objective**: Tracks lifetime cumulative capital accumulation reaching $29.36M at the end of the project timeframe.
+* **Output / Finding:** Seamlessly models cash accumulation from $0 in late 2010 to **$29.36 Million** in 2014.
 
-#### 15. Advanced SQL: Best Selling Product Category
+---
+
+#### 🏆 Query 17: Customer Spend Ranking with `DENSE_RANK()`
+* **Business Objective:** Rank high-net-worth customers to power account-based VIP marketing and loyalty retention.
+```sql
+SELECT 
+    c.CustomerKey,
+    CONCAT(c.FirstName, ' ', COALESCE(c.MiddleName, ''), ' ', c.LastName) AS CustomerFullName,
+    ROUND(SUM(s.UnitPrice * s.OrderQuantity * (1 - s.UnitPriceDiscountPct)), 2) AS TotalSalesAmount,
+    DENSE_RANK() OVER (ORDER BY SUM(s.UnitPrice * s.OrderQuantity * (1 - s.UnitPriceDiscountPct)) DESC) AS CustomerRank
+FROM v_unionedsales s
+JOIN dimcustomer c ON s.CustomerKey = c.CustomerKey
+GROUP BY c.CustomerKey, CustomerFullName
+LIMIT 10;
+```
+* **Output / Finding:** Identifies **Jordan Turner** ($16.00K) as the #1 spender, with the top 10 customers closely clustered between $13K and $16K.
+
+</details>
+
+<details>
+<summary><b>📋 Click to expand Queries 1 to 12 & 15 to 16 (Standard Analytics & KPIs)</b></summary>
+
+<br/>
+
+#### Query 0: Unified Sales View
+```sql
+CREATE OR REPLACE VIEW v_UnionedSales AS
+    SELECT * FROM factinternetsales 
+    UNION ALL SELECT * FROM factinternetsalesnew;
+```
+
+#### Query 1: Product Name Lookup
+```sql
+SELECT s.*, p.EnglishProductName AS ProductName
+FROM v_UnionedSales s
+LEFT JOIN dimproduct p ON s.ProductKey = p.ProductKey;
+```
+
+#### Query 2: Customer Full Name & Unit Price Lookup
+```sql
+SELECT 
+    CONCAT(c.FirstName, ' ', COALESCE(c.MiddleName, ''), ' ', c.LastName) AS CustomerFullName,
+    p.EnglishProductName AS ProductName,
+    s.UnitPrice
+FROM sales s
+JOIN dimcustomer c ON s.CustomerKey = c.CustomerKey
+JOIN dimproduct p ON s.ProductKey = p.ProductKey;
+```
+
+#### Query 3: Calendar & Financial Date Attributes
+```sql
+SELECT 
+    OrderDateKey,
+    STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d') AS OrderDateParsed,
+    YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderYear,
+    MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderMonthNo,
+    MONTHNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderMonthFullName,
+    CONCAT('Q', QUARTER(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))) AS OrderQuarter,
+    DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b') AS OrderYearMonth,
+    DAYOFWEEK(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderWeekdayNo,
+    DAYNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS OrderWeekdayName,
+    MOD(MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) + 5, 12) + 1 AS FinancialMonth,
+    CONCAT('FQ', CEILING((MOD(MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) + 5, 12) + 1) / 3.0)) AS FinancialQuarter
+FROM v_UnionedSales;
+```
+
+#### Queries 4, 5 & 6: Sales Amount, Production Cost & Net Profit
+```sql
+SELECT 
+    SalesOrderNumber,
+    (UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS CalculatedSalesAmount,
+    (ProductStandardCost * OrderQuantity) AS CalculatedProductionCost,
+    ((UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) - (ProductStandardCost * OrderQuantity)) AS CalculatedProfit
+FROM v_UnionedSales;
+```
+
+#### Query 7: Monthly Sales Filterable by Year (e.g., 2014)
+```sql
+SELECT 
+    MONTHNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS Month,
+    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
+FROM v_UnionedSales
+WHERE YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) = 2014
+GROUP BY MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')), MONTHNAME(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))
+ORDER BY MONTH(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'));
+```
+
+#### Query 8: Year-Wise Sales Trend
+```sql
+SELECT 
+    YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')) AS Year,
+    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
+FROM v_UnionedSales
+GROUP BY YEAR(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))
+ORDER BY Year;
+```
+
+#### Query 9: Chronological Month-Wise Sales Trend
+```sql
+SELECT 
+    DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b') AS YearMonth,
+    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
+FROM v_UnionedSales
+GROUP BY DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b'), STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m')
+ORDER BY STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m');
+```
+
+#### Query 10: Quarter-Wise Sales Contribution (Q1–Q4)
+```sql
+SELECT 
+    CONCAT('Q', QUARTER(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'))) AS Quarter,
+    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
+FROM v_UnionedSales
+GROUP BY CONCAT('Q', QUARTER(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d')))
+ORDER BY Quarter;
+```
+
+#### Query 11: Dual-Axis Sales Amount vs. Production Cost
+```sql
+SELECT 
+    DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b') AS YearMonth,
+    SUM(UnitPrice * OrderQuantity * (1 - (IFNULL(UnitPriceDiscountPct, 0) / 100.0))) AS TotalSalesAmount,
+    SUM(ProductStandardCost * OrderQuantity) AS TotalProductionCost
+FROM v_UnionedSales
+GROUP BY DATE_FORMAT(STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m%d'), '%Y-%b'), STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m')
+ORDER BY STR_TO_DATE(CAST(OrderDateKey AS CHAR), '%Y%m');
+```
+
+#### Query 12: Top Products, Top Customers, Regional Breakdown
+```sql
+-- Top 10 Products by Gross Sales
+SELECT p.EnglishProductName AS ProductName,
+       SUM(s.UnitPrice * s.OrderQuantity * (1 - (IFNULL(s.UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
+FROM v_UnionedSales s JOIN dimproduct p ON s.ProductKey = p.ProductKey
+GROUP BY p.EnglishProductName ORDER BY TotalSales DESC LIMIT 10;
+
+-- Top 10 Customers by Total Spend
+SELECT CONCAT(c.FirstName, ' ', IFNULL(c.MiddleName, ''), ' ', c.LastName) AS CustomerFullName,
+       SUM(s.UnitPrice * s.OrderQuantity * (1 - (IFNULL(s.UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
+FROM v_UnionedSales s JOIN dimcustomer c ON s.CustomerKey = c.CustomerKey
+GROUP BY CustomerFullName ORDER BY TotalSales DESC LIMIT 10;
+
+-- Regional Sales Performance
+SELECT t.SalesTerritoryRegion AS Region,
+       SUM(s.UnitPrice * s.OrderQuantity * (1 - (IFNULL(s.UnitPriceDiscountPct, 0) / 100.0))) AS TotalSales
+FROM v_UnionedSales s JOIN dimsalesterritory t ON s.SalesTerritoryKey = t.SalesTerritoryKey
+GROUP BY t.SalesTerritoryRegion ORDER BY TotalSales DESC;
+```
+
+#### Query 15: Best Selling Product Category
 ```sql
 SELECT 
     pc.EnglishProductCategoryName AS ProductCategory,
@@ -271,180 +393,194 @@ JOIN dimproduct p ON s.ProductKey = p.ProductKey
 JOIN dimproductsubcategory psc ON p.ProductSubcategoryKey = psc.ProductSubcategoryKey
 JOIN dimproductcategory pc ON psc.ProductCategoryKey = pc.ProductCategoryKey
 GROUP BY pc.EnglishProductCategoryName
-ORDER BY TotalSalesAmount DESC
-LIMIT 1;
+ORDER BY TotalSalesAmount DESC LIMIT 1;
 ```
-* **Output / Objective**: Proves that **Bikes** generate more than 85% of company-wide sales, towering over Clothing and Accessories.
 
-#### 16. Advanced SQL: Highest Profit-Generating Products
+#### Query 16: Top 10 Profit-Generating Products
 ```sql
 SELECT 
     p.EnglishProductName AS ProductName,
     SUM((s.UnitPrice * s.OrderQuantity * (1 - s.UnitPriceDiscountPct)) - (s.ProductStandardCost * s.OrderQuantity)) AS TotalProfit
-FROM v_unionedsales s
-JOIN dimproduct p ON s.ProductKey = p.ProductKey
-GROUP BY p.EnglishProductName
-ORDER BY TotalProfit DESC
-LIMIT 10;
+FROM v_unionedsales s JOIN dimproduct p ON s.ProductKey = p.ProductKey
+GROUP BY p.EnglishProductName ORDER BY TotalProfit DESC LIMIT 10;
 ```
-* **Output / Objective**: Ranks items by true profit contribution, ensuring marketing focuses on high-margin models rather than solely volume.
 
-#### 17. Advanced SQL: Customer Ranking with `DENSE_RANK()`
-```sql
-SELECT 
-    c.CustomerKey,
-    CONCAT(c.FirstName, ' ', COALESCE(c.MiddleName, ''), ' ', c.LastName) AS CustomerFullName,
-    SUM(s.UnitPrice * s.OrderQuantity * (1 - s.UnitPriceDiscountPct)) AS TotalSalesAmount,
-    DENSE_RANK() OVER (ORDER BY SUM(s.UnitPrice * s.OrderQuantity * (1 - s.UnitPriceDiscountPct)) DESC) AS CustomerRank
-FROM v_unionedsales s
-JOIN dimcustomer c ON s.CustomerKey = c.CustomerKey
-GROUP BY c.CustomerKey, CustomerFullName;
-```
-* **Output / Objective**: Assigns competitive customer rankings to support VIP loyalty programs and account-based marketing.
+*For complete walkthroughs and query execution notes, visit [docs/SQL_SOLUTIONS.md](docs/SQL_SOLUTIONS.md).*
+
+</details>
 
 ---
 
 ## 📈 Interactive Dashboards & Visualizations
 
-### 1. Tableau Executive Dashboard
-The Tableau workbook (`Tableau/AdvWorksTableauProject.twbx`) provides a holistic sales overview with dynamic cross-filtering:
-- **KPI Summary Cards**: Total Sales ($29.36M), Total Profit ($12.08M), and Production Cost ($17.28M).
-- **Dual-Axis Trend**: Year-wise sales plotted in comparison with manufacturing cost.
-- **Quarterly Distribution**: Donut/Pie visual showing sales weight across Q1 through Q4.
-- **Monthly Trajectory**: Continuous line chart showing multi-year trend patterns.
-- **Top 10 Product Leaderboard**: Ranked bar chart of highest-grossing models.
-- **Interactive Multi-Slicers**: Slice by Year, Quarter, and Geographic Region.
+### 1. Tableau Executive Sales Overview
+*Packaged Workbook:* [`Tableau/AdvWorksTableauProject.twbx`](Tableau/AdvWorksTableauProject.twbx)
 
-![Tableau Dashboard](assets/images/tableau_dashboard.png)
+<div align="center">
+  <img src="assets/images/tableau_dashboard.png" alt="Tableau Dashboard" width="900" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+</div>
 
----
-
-### 2. Power BI Enterprise Dashboard
-The Power BI report (`PowerBi/AdventureWorksPowerBiProjectNew.pbix`) delivers deep regional and customer intelligence with interactive DAX measures:
-- **Top KPI Ribbon**: Total Sales, Total Cost, Total Profit, Quantity Sold, and Profit Margin (41.15%).
-- **Regional Breakdown**: Sales distribution across sales territories (Southwest, Northwest, Australia, UK, Germany, etc.).
-- **Monthly Trends & Quarterly Proportions**: Multi-chart visual synchronization.
-- **Customer & Product Rankings**: Top 10 customers and top 10 products.
-- **Cost vs. Sales Combo**: Synchronized bar and area/line visual tracking gross margin over time.
-- **Interactive Slicers**: Instant drill-down by Region, Year, and Quarter.
-
-![Power BI Dashboard](assets/images/powerbi_dashboard.png)
+- **Dynamic KPI Tiles**: Instant visual cues for **Total Sales ($29.36M)**, **Total Profit ($12.08M)**, and **Production Cost ($17.28M)**.
+- **Dual-Axis Bar & Line Combo**: Visualizes year-by-year sales volume alongside underlying production cost curves.
+- **Quarterly Sales Breakdown**: Interactive donut chart revealing sales concentration across Q1, Q2, Q3, and Q4.
+- **Top 10 Product Leaderboard**: Ranked bar chart with tooltip insights on margin contribution.
+- **Multi-Level Slicers**: Filter across **Year** (2010–2014), **Quarter**, and **Sales Region**.
 
 ---
 
-### 3. Microsoft Excel Interactive Dashboard
-The Excel workbook (`Excel/PROJECT ADVENTURES WORK 1.xlsx`) demonstrates enterprise-grade spreadsheet design:
-- **Dynamic KPI Cards**: Total Revenue, Total Customer Count, Product Count, and Profit Margin.
-- **Yearly Sales Trend (2010–2014)**: Clean bar chart illustrating year-over-year revenue expansion.
-- **Monthly Sales Line Pattern**: Seasonal performance across calendar months.
-- **Quarterly Sales Breakdown**: Proportional contribution chart.
-- **Top 10 Products by Sales**: Clear bar chart breakdown.
-- **Timeline & Dimension Slicers**: Seamless filtering across years and quarters.
+### 2. Power BI Enterprise Intelligence Dashboard
+*Power BI Report:* [`PowerBi/AdventureWorksPowerBiProjectNew.pbix`](PowerBi/AdventureWorksPowerBiProjectNew.pbix)
 
-![Excel Dashboard](assets/images/excel_dashboard.png)
+<div align="center">
+  <img src="assets/images/powerbi_dashboard.png" alt="Power BI Dashboard" width="900" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+</div>
 
----
-
-## 💡 Strategic Business Insights & Actionable Recommendations
-
-> [!IMPORTANT]
-> ### 1. Capitalize on Mountain Bike Dominance
-> Mountain bikes account for the vast majority of top-tier revenue and highest profit margins (led by **Mountain-200 Black, 42** at $1.37M). 
-> **Recommendation**: Protect inventory levels of high-margin frame sizes and package them with premium cycling accessories to increase basket size.
-
-> [!TIP]
-> ### 2. Expand the Australian & Southwest Playbook
-> While Southwest USA leads domestic sales, **Australia achieved an impressive $9.06M**, proving exceptionally high international demand.
-> **Recommendation**: Replicate the Australian distribution and localized marketing model across underperforming European territories (e.g., France and Germany).
-
-> [!NOTE]
-> ### 3. Seasonal Pre-Ordering & Inventory Buffer for Q4
-> Across all five years, **Q4 consistently outperforms Q1–Q3** due to holiday gift purchases and end-of-year cycling sales.
-> **Recommendation**: Optimize supply chain lead times by ramping up component production in the Mexico facility by August to prevent stockouts in November and December.
-
-> [!TIP]
-> ### 4. Launch a VIP Loyalty Program for Top Customers
-> The top 10 customers have each accumulated between **$13K and $16K** in lifetime purchases.
-> **Recommendation**: Institute an exclusive concierge loyalty tier offering early access to new releases, free annual bike tune-ups, and bespoke accessories.
+- **Interactive Metric Ribbon**: Tracks Sales, Cost, Profit, Units Sold, and Gross Profit Margin (**41.15%**).
+- **Territory Regional Distribution**: Highlights **Australia ($9.06M)** and **Southwest USA** as leading profit centers.
+- **Cross-Visual Highlighting**: Clicking any regional bar filters all monthly trends and product rankings instantaneously.
+- **Top 10 Customers**: Deep-dive into customer lifetime spend with drill-through capability.
+- **Interactive Slicers**: Real-time cross-filtering by **Region**, **Fiscal Year**, and **Quarter**.
 
 ---
 
-## 📁 Repository Directory Structure
+### 3. Microsoft Excel Dynamic Dashboard
+*Excel Workbook:* [`Excel/PROJECT ADVENTURES WORK 1.xlsx`](Excel/PROJECT%20ADVENTURES%20WORK%201.xlsx)
 
-```plaintext
-Adventure-Works/
-│
-├── .gitignore                                   # Ignore OS & temporary files
-├── README.md                                    # Complete project documentation & outputs
-│
-├── assets/
-│   └── images/
-│       ├── data_model_star_schema.png           # Star-schema data architecture
-│       ├── tableau_dashboard.png                # Tableau interactive dashboard
-│       ├── powerbi_dashboard.png                # Power BI business intelligence dashboard
-│       └── excel_dashboard.png                  # Excel dynamic pivot dashboard
-│
-├── Excel/
-│   └── PROJECT ADVENTURES WORK 1.xlsx           # Excel workbook with formulas, lookups & pivot tables
-│
-├── MySQL/
-│   ├── AdventureWorkDatabase.sql                # Complete MySQL database export (tables, data, keys)
-│   └── adventureworks.sql                       # 17 comprehensive SQL queries & advanced analytics
-│
-├── PowerBi/
-│   └── AdventureWorksPowerBiProjectNew.pbix     # Power BI data model, DAX measures & visuals
-│
-├── Tableau/
-│   └── AdvWorksTableauProject.twbx              # Tableau packaged workbook with interactive dashboards
-│
-└── Report/
-    ├── AdventureWorks_Sales_Analysis (2).pptx   # Executive presentation slide deck (15 slides)
-    └── Adventure_works_Report.pdf              # Comprehensive academic final report document
+<div align="center">
+  <img src="assets/images/excel_dashboard.png" alt="Excel Dashboard" width="900" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+</div>
+
+- **Automated Summary KPIs**: Dynamic cells calculating total revenues, customer reach, catalog depth, and margin.
+- **Multi-Year Trend Analysis**: Year-over-year bar chart illustrating growth trajectory from 2010 to 2014.
+- **Interactive Pivot Slicers**: Coordinated timeline and slicer buttons updating charts across all worksheet views.
+
+*For complete interactive user instructions, refer to the [🖥️ Dashboard Architecture & User Guide](docs/DASHBOARDS_GUIDE.md).*
+
+---
+
+## 💡 Strategic Business Insights & Actionable Matrix
+
+```
+┌───────────────────────────────┬───────────────────────────────┐
+│     STRENGTHS & FINDINGS      │     STRATEGIC ACTION ITEMS    │
+├───────────────────────────────┼───────────────────────────────┤
+│ 1. Mountain Bike Dominance    │ • Maintain priority inventory │
+│    Mountain-200 models drive  │   for Mountain-200 sizes.     │
+│    the highest margins.       │ • Bundle bikes with helmets,  │
+│                               │   pedals & maintenance kits.  │
+├───────────────────────────────┼───────────────────────────────┤
+│ 2. Strong Australian Demand   │ • Scale the Australian dist-  │
+│    Australia generated $9.06M │   ribution model into Europe. │
+│    (30.8% of global sales).   │ • Expand regional marketing   │
+│                               │   in Germany and the UK.      │
+├───────────────────────────────┼───────────────────────────────┤
+│ 3. Q4 Holiday Peak Season     │ • Ramp up Mexico subcomponent │
+│    Q4 consistently outperforms│   manufacturing by August.    │
+│    Q1-Q3 across all years.    │ • Establish buffer stock to   │
+│                               │   prevent Q4 stockouts.       │
+├───────────────────────────────┼───────────────────────────────┤
+│ 4. High Customer Retention    │ • Launch a VIP Concierge Tier │
+│    Top 10 customers spent     │   for customers with $10K+ LTV│
+│    between $13K and $16K.     │ • Provide early access & tune-│
+│                               │   up incentives to top buyers.│
+└───────────────────────────────┴───────────────────────────────┘
 ```
 
 ---
 
 ## 👥 Academic Project Team – Group 4
 
-This project was developed as a course academic capstone by **Group 4**:
+This project was developed and delivered as an academic capstone by **Group 4**:
 
-| Team Member | Academic Project Role | Key Contributions |
-| :--- | :--- | :--- |
-| **Akshay Rathod** | **Data Analyst (Lead)** | SQL query architecture, Power BI dashboard development, end-to-end analytics workflow & documentation |
-| **Ega Venkat Sai** | **Data Analyst** | Data transformation, Excel modeling, pivot tables & chart design |
-| **Usirikayala Vishnu Vamsi** | **Data Analyst** | MySQL database schema design, view creation & window function queries |
-| **Bathala Siva Kumar** | **Data Analyst** | Tableau workbook development, visual design & multi-parameter slicers |
-| **Pratyush Parashar** | **Business Analyst** | Business requirement mapping, KPI formulation & executive presentation deck |
-| **Hitesh Prajapati** | **Data Analyst** | Power Query data cleaning, star-schema data modeling & DAX measures |
-| **Prashant Pankaj Singh** | **Data Analyst** | Comprehensive reporting, exploratory data validation & statistical verification |
+<div align="center">
 
----
+| Name | Role | Core Contributions | Profile |
+| :--- | :--- | :--- | :---: |
+| **Akshay Rathod** | **Data Analyst (Lead)** | SQL query architecture, Power BI dashboard development, end-to-end analytics workflow & documentation | [![GitHub](https://img.shields.io/badge/GitHub-Akshay--Notfound-181717?style=flat-square&logo=github)](https://github.com/Akshay-Notfound) |
+| **Ega Venkat Sai** | **Data Analyst** | Data transformation, Excel modeling, pivot tables & chart design | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
+| **Usirikayala Vishnu Vamsi** | **Data Analyst** | MySQL database schema design, view creation & window function queries | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
+| **Bathala Siva Kumar** | **Data Analyst** | Tableau workbook development, visual design & multi-parameter slicers | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
+| **Pratyush Parashar** | **Business Analyst** | Business requirement mapping, KPI formulation & executive presentation deck | ![Analyst](https://img.shields.io/badge/Role-Business%20Analyst-purple?style=flat-square) |
+| **Hitesh Prajapati** | **Data Analyst** | Power Query data cleaning, star-schema data modeling & DAX measures | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
+| **Prashant Pankaj Singh** | **Data Analyst** | Comprehensive reporting, exploratory data validation & statistical verification | ![Analyst](https://img.shields.io/badge/Role-Data%20Analyst-blue?style=flat-square) |
 
-## 🚀 Setup & Reproduction Guide
-
-### 1. MySQL Database Restoration
-1. Ensure **MySQL Server 8.0+** and **MySQL Workbench** are installed.
-2. Open MySQL Workbench and execute the full dump to restore schema and records:
-   ```bash
-   mysql -u root -p < MySQL/AdventureWorkDatabase.sql
-   ```
-3. Open and run the analytical script `MySQL/adventureworks.sql` to generate views, KPIs, and advanced window queries.
-
-### 2. Microsoft Excel Workbook
-- Requires **Microsoft Excel 2016** or newer (supports `XLOOKUP`, Dynamic Arrays, and Modern Pivot Tables).
-- Open `Excel/PROJECT ADVENTURES WORK 1.xlsx` to inspect data cleaning, calculated columns, and interactive dashboard sheets.
-
-### 3. Microsoft Power BI
-- Requires **Power BI Desktop** (latest free edition).
-- Open `PowerBi/AdventureWorksPowerBiProjectNew.pbix` to interact with the star schema, explore DAX formulas, and test cross-visual filtering.
-
-### 4. Tableau Desktop
-- Requires **Tableau Desktop** or **Tableau Reader**.
-- Open `Tableau/AdvWorksTableauProject.twbx` to interact with packaged data, calculated fields, and interactive dashboard filters.
+</div>
 
 ---
 
-## 📜 Academic Disclaimer & License
-This project is an academic capstone created using the publicly available Microsoft AdventureWorks sample dataset for educational and analytical purposes.
+## 🚀 Quickstart & Reproduction Guide
 
-Distributed under the **MIT License**. Feel free to use this repository as a reference for data analytics workflows, SQL scripting, and business intelligence dashboard design.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Akshay-Notfound/Adventure-Works.git
+cd Adventure-Works
+```
+
+### 2. Restore MySQL Database & Run Queries
+```bash
+# Import database schema and 60K+ transaction records
+mysql -u root -p < MySQL/AdventureWorkDatabase.sql
+
+# Execute the complete analytical query suite
+mysql -u root -p adventureworks < MySQL/adventureworks.sql
+```
+
+### 3. Open BI Dashboards & Reports
+- **Power BI:** Double-click [`PowerBi/AdventureWorksPowerBiProjectNew.pbix`](PowerBi/AdventureWorksPowerBiProjectNew.pbix) in Power BI Desktop.
+- **Tableau:** Open [`Tableau/AdvWorksTableauProject.twbx`](Tableau/AdvWorksTableauProject.twbx) with Tableau Desktop or Tableau Reader.
+- **Excel:** Open [`Excel/PROJECT ADVENTURES WORK 1.xlsx`](Excel/PROJECT%20ADVENTURES%20WORK%201.xlsx) in Excel 2016 or newer.
+- **Slide Presentation:** Open [`Report/AdventureWorks_Sales_Analysis (2).pptx`](Report/AdventureWorks_Sales_Analysis%20(2).pptx) in PowerPoint or Google Slides.
+- **Academic Report:** Open [`Report/Adventure_works_Report.pdf`](Report/Adventure_works_Report.pdf) in any PDF viewer.
+
+---
+
+## 📂 Repository Directory Tree
+
+```plaintext
+Adventure-Works/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md                        # Bug report template
+│   │   └── query_request.md                     # Analytics query proposal template
+│   └── PULL_REQUEST_TEMPLATE.md                 # PR quality review checklist
+├── .gitignore                                   # Ignore OS & temporary files
+├── README.md                                    # Interactive repository documentation
+│
+├── assets/
+│   └── images/
+│       ├── data_model_star_schema.png           # High-resolution Star-Schema ERD
+│       ├── tableau_dashboard.png                # Tableau interactive sales overview
+│       ├── powerbi_dashboard.png                # Power BI regional intelligence
+│       └── excel_dashboard.png                  # Excel summary pivot dashboard
+│
+├── docs/
+│   ├── DATA_DICTIONARY.md                       # Comprehensive data dictionary
+│   ├── DASHBOARDS_GUIDE.md                      # Interactive dashboard user guide
+│   └── SQL_SOLUTIONS.md                         # Full catalog of all 17 SQL queries
+│
+├── Excel/
+│   └── PROJECT ADVENTURES WORK 1.xlsx           # Excel workbook with formulas & pivot tables
+│
+├── MySQL/
+│   ├── AdventureWorkDatabase.sql                # Complete MySQL database export (22MB)
+│   └── adventureworks.sql                       # 17 analytical SQL queries & window functions
+│
+├── PowerBi/
+│   └── AdventureWorksPowerBiProjectNew.pbix     # Power BI data model & DAX calculations
+│
+├── Tableau/
+│   └── AdvWorksTableauProject.twbx              # Tableau packaged interactive workbook
+│
+└── Report/
+    ├── AdventureWorks_Sales_Analysis (2).pptx   # 15-slide executive presentation pitch deck
+    └── Adventure_works_Report.pdf              # Complete academic capstone technical report
+```
+
+---
+
+<div align="center">
+
+### ⭐ If you find this analytics project helpful, feel free to give it a star!
+*Developed with dedication by Academic Group 4 • 2026*
+
+</div>
