@@ -1,0 +1,17 @@
+# Temporary & OS Files
+~$*.xlsx
+~$*.pptx
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE & Editor files
+.vscode/
+.idea/
